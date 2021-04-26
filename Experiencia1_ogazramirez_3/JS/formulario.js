@@ -97,5 +97,6 @@ formulario.addEventListener('submit', (e) => {
 		});
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+		alert("Revice los Datos, faltan campos o hay inconcistencia en la contrasenna")
 	}
 });
