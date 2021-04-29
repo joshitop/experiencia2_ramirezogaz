@@ -4,15 +4,25 @@ const inputs = document.querySelectorAll('#formulario input'); //recordad que fo
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{1,16}$/, // Letras, numeros, guion y guion_bajo
 	nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
+	apellido:/^[a-zA-ZÀ-ÿ\s]{4,40}$/,
 	password: /^.{8,20}$/, // 8 a 20 digitos.
-	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono: /^\d{7,14}$/,  // 7 a 14 números.
+	direccion: /^[a-zA-Z0-9]{1,30}$/,
+	ciudad: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
+	codigo_postal: /^\d{7}$/
 }
 
 const campos = {
 	usuario: false,
 	nombre: false,
+	apellido: false,
 	password: false,
-	correo: false
+	correo: false,
+	telefono: false,
+	ciudad: false,
+	dirección: false,
+	codigo_postal: false
 }
 
 const validarFormulario = (e) => {
@@ -23,6 +33,9 @@ const validarFormulario = (e) => {
 		case "nombre":
 			validarCampo(expresiones.nombre, e.target, 'nombre');
 		break;
+		case "apellido":
+			validarCampo(expresiones.apellido, e.target, 'apellido');
+		break;
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
 			validarPassword2();
@@ -32,6 +45,18 @@ const validarFormulario = (e) => {
 		break;
 		case "correo":
 			validarCampo(expresiones.correo, e.target, 'correo');
+		break;
+		case "telefono":
+			validarCampo(expresiones.telefono, e.target, 'telefono');
+		break;
+		case "ciudad":
+			validarCampo(expresiones.ciudad, e.target, 'ciudad');
+		break;
+		case "direccion":
+			validarCampo(expresiones.direccion, e.target, 'direccion');
+		break;
+		case "codigo postal":
+			validarCampo(expresiones.codigo_postal, e.target, 'codigo postal');
 		break;
 	}
 }
@@ -83,8 +108,8 @@ inputs.forEach((input) => {
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
-	//const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo ){
+	const terminos = document.getElementById('terminos');
+	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.apellido && campos.ciudad && campos.codigo_postal && campos.dirección && terminos.checked){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
@@ -97,6 +122,6 @@ formulario.addEventListener('submit', (e) => {
 		});
 	} else {
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
-		alert("Revice los Datos, faltan campos o hay inconcistencia en la contrasenna")
+		alert("Revice los Datos, faltan campos o hay inconcistencia en la contraseña")
 	}
 });
