@@ -99,7 +99,7 @@
       
         <!-- las 3 views de nuestro progeso profesional -->
         <div class="row">
-          <div class="col-lg-4">
+          <div class=" col-md-4">
             <h2>Visión</h2>
             <p>Somos una Start-up emergente en Chile con proyecciones de traer al mercado latinoamericano una aplicación de citas, amigos y personal de compañía, en ella podrás encontrar diversos perfiles que puedes contratar para cualquier evento u ocasión especial.</p>
           </div>
@@ -154,12 +154,35 @@
       <h3><b>Conoce un poco mas de este modelo de negocios, puesto a prueba en Asia.</b></h3>
     </div>
     <br>
+
+    <div class="container row">
+    
+      <!--Evento-->
+      <script>
+        function Cambiar()
+         {
+          var a = prompt('Escribe un nuevo titulo: ');
+          document.getElementById('title1').innerHTML=a;
+          }
+        </script>
+        <div class="container col-xs-12 col-sm-8 col-md-4 col-lg-2 "> <!--col-xs-12 col-sm-8 col-md-4 col-lg-2-->
+          <h2>Si tienes sugerencias de nuevos servicios, comentanos</h2>
+          
+       
+       <div class="formulario__grupo-input">
+        <h2 id="title1" onclick="Cambiar()"><input type="text" class="formulario__input" name="direccion"  placeholder="Excribe tu comentario"></h2>
+         <i class="formulario__validacion-estado fas fa-times-circle"></i>
+    </div></div>
+
       <!-- repodrucion video directo de youtube-->
-    <div class="container justify-content-between center">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/dLBNO33bMX0" 
-        title="YouTube video player" frameborder="1"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
-      </iframe>
+      <div class="col-xs-12 col-sm-8 col-md-4 col-lg-4 ">  <!-- col-xs-1 col-sm-4 col-md-4 col-lg-2   container justify-content-between-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dLBNO33bMX0" 
+          title="YouTube video player" frameborder="1"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen >
+        </iframe>
+      </div> 
+  
+
     </div>
 
     <footer id="footer" class="bg-light text-center text-lg-start">
