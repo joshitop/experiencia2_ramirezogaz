@@ -77,6 +77,16 @@
             </div>
             <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
           </div>
+
+           <!-- Grupo: Correo Electronico -->
+           <div class="formulario__grupo" id="grupo__correo">
+            <label for="correo" class="formulario__label">Correo Electrónico</label>
+            <div class="formulario__grupo-input">
+              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.cl">
+              <i class="formulario__validacion-estado fas fa-times-circle"></i>
+            </div>
+            <p class="formulario__input-error">El correo solo puede contener caracteres de tipo letra, numericos, puntos, guiones y guion bajo.</p>
+          </div>
                  
           <!-- Grupo: Contraseña -->
           <div class="formulario__grupo" id="grupo__password">
@@ -92,21 +102,12 @@
 			    <div class="formulario__grupo" id="grupo__password2">
 				    <label for="password2" class="formulario__label">Repetir Contraseña</label>
 				    <div class="formulario__grupo-input">
-					      <input type="password" class="formulario__input" name="password2" id="password2" >
+					      <input type="password" class="formulario__input" name="password2" id="password2" placeholder="repita contraseña">
 				    	  <i class="formulario__validacion-estado fas fa-times-circle"></i>
 				    </div>
 				    <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
 		    	</div>
-    
-          <!-- Grupo: Correo Electronico -->
-          <div class="formulario__grupo" id="grupo__correo">
-            <label for="correo" class="formulario__label">Correo Electrónico</label>
-            <div class="formulario__grupo-input">
-              <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.cl">
-              <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            </div>
-            <p class="formulario__input-error">El correo solo puede contener caracteres de tipo letra, numericos, puntos, guiones y guion bajo.</p>
-          </div>
+
           <!-- Grupo: Teléfono -->
           <div class="formulario__grupo" id="grupo__telefono">
             <label for="telefono" class="formulario__label">Teléfono</label>
@@ -125,24 +126,7 @@
             </div>
             <p class="formulario__input-error">La direccion solo puede contener caracteres de tipo numerico y letras.</p>
           </div>
-          <!--Grupo: Dirección -->
-          <div class="formulario__grupo" id="grupo__direccion">
-             <label for="telefono" class="formulario__label">Dirección</label>
-             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="direccion" id="direccion" placeholder="av los pericos 333">
-                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
-            </div>
-            <p class="formulario__input-error">La direccion solo puede contener caracteres de tipo numerico y letras.</p>
-          </div>
-          <!--Grupo: Código Postal -->
-          <div class="formulario__grupo" id="grupo__codigo_postal">
-            <label for="telefono" class="formulario__label">Código Postal</label>
-             <div class="formulario__grupo-input">
-                <input type="text" class="formulario__input" name="codigo_postal" id="codigo_postal" placeholder="7708809">
-                <i class="formulario__validacion-estado fas fa-times-circle"></i>
-             </div>
-            <p class="formulario__input-error">El código postal solo puede tener caracteres de tipo numerico y con un largo de 7.</p>
-          </div>
+        <!--aqui saque cosas sauq1-->
             <!-- Grupo: Terminos y Condiciones -->
 			    <div class="formulario__grupo" id="grupo__terminos">
 				    <label class="formulario__label">
@@ -174,7 +158,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-      <script src="JS/formulario.js"></script>
+      <script src="JS/register.js"></script>
       <!--Para efecto de check en los datos-->
       <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   </body>
